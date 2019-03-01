@@ -1,19 +1,42 @@
 stubrunner:
   # please register the stubs in a real eureka instead of faking it
-  cloud.stubbed.discovery.enabled: false
+#  cloud.stubbed.discovery.enabled: false
   repositoryRoot: ${REPO_WITH_BINARIES}
   username: ${M2_SETTINGS_REPO_USERNAME}
   password: ${M2_SETTINGS_REPO_PASSWORD}
+  stubs-mode: remote
+  cloud:
+    eureka:
+      enabled: true
+    stubbed:
+      discovery:
+        # this should be false, not true
+        enabled: false
+    services:
+      registrationMethod: route
+#server:
+#  ssl:
+#    key-store-password: password
+#    key-password: password
+#    trust-store-password: password
+#  port: -1
+
 server.port: ${PORT:8083}
 spring:
   application:
     name: stubrunner
 
-security:
-  basic:
-    enabled: false
+#security:
+#  basic:
+#    enabled: false
 
 management:
   security:
     enabled: false
-
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
