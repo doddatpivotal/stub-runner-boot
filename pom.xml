@@ -26,7 +26,7 @@
 		<!--<spring-cloud-services.version>1.5.0.RELEASE</spring-cloud-services.version>-->
 		<!--<spring-cloud.version>Edgware.BUILD-SNAPSHOT</spring-cloud.version>-->
 		<spring-cloud-services.version>2.0.3.RELEASE</spring-cloud-services.version>
-		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<distribution.management.release.id>artifactory-local</distribution.management.release.id>
 		<distribution.management.release.url>http://localhost:8081/artifactory/libs-release-local</distribution.management.release.url>
 	</properties>
